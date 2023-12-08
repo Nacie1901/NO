@@ -1,0 +1,27 @@
+5.in sql
+Binary: 11000101 -> Decimal: 197
+Binary: 10101010 -> Decimal: 170
+Binary: 11111111 -> Decimal: 255
+Binary: 10000000 -> Decimal: 128
+Binary: 1111100000 -> Decimal: 992
+
+6.def decimal_to_binary(decimal):
+stack = []
+
+while decimal > 0:
+    remainder = decimal % 2
+    stack.append(remainder)
+    decimal //= 2
+
+binary_representation = ""
+while stack:
+    binary_representation += str(stack.pop())
+
+return binary_representation
+7.A+B−C = AB+C−AB+C−
+(A+B)∗C(A+B)∗C = AB+C∗AB+C∗
+(A+B)∗(C−D)(A+B)∗(C−D) =AB+CD−∗AB+CD−∗
+A+((B+C)∗(E−F)−G)/(H−I)A+((B+C)∗(E−F)−G)/(H−I) = ABC+EF−∗G−HI−/+ABC+EF−∗G−HI−/+
+A+B∗(C+D)−E/F∗G+HA+B∗(C+D)−E/F∗G+H = ABCD+∗+EF/G∗−H+ABCD+∗+EF/G∗−H+
+
+Comment
